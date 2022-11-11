@@ -1,0 +1,30 @@
+apiVersion: v1
+kind: Pod
+
+metadata:
+  name: myfirstpod
+  labels:
+    env1: dev
+    env: prod
+
+spec:
+  containers:
+    - name: firstcontainer
+      image: coolgourav147/nginx-custom
+      env:
+        - name: debi
+          value: BBSR
+        - name: rajendra
+          value: deogarh
+      
+    - name: secondcontainer
+      image: coolgourav147/nginx-custom
+      
+  initContainers:
+    - name: initcontainer1
+      image: coolgourav147/nginx-custom
+      env: 
+      - name: mohit
+        value: KPD
+      args: ["sleep", "30"]
+    
