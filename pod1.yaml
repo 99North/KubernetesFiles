@@ -4,9 +4,15 @@ kind: Pod
 metadata:
   name: myfirstpod
   labels:
-    env: dev
+    env1: dev
+    env: prod
 
 spec:
   containers:
-    - name: containername
+    - name: firstcontainer
       image: coolgourav147/nginx-custom
+      env:
+        - name: debi
+          value: BBSR
+        - name: rajendra
+          value: deogarh
