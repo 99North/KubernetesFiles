@@ -16,3 +16,6 @@ spec:
           value: BBSR
         - name: rajendra
           value: deogarh
+      # args: ["sleep", "3600"] //used it for testing purpose
+    - name: secondcontainer
+      image: coolgourav147/nginx-custom
