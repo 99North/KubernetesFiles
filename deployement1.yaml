@@ -1,6 +1,8 @@
 apiVersion: apps/v1
 kind: Deployment
 metadata:
+  annotations:
+    kubernetes.io/change-cause: "1st deploy"
   creationTimestamp: null
   labels:
     env: dev
@@ -18,7 +20,7 @@ spec:
         env: dev
     spec:
       containers:
-      - image: nginx:1.21
+      - image: coolgourav147/nginx-custom:v1
         name: nginx
         ports:
         - containerPort: 80
