@@ -1,7 +1,7 @@
 apiVersion: v1
 kind: Pod
 metadata:
-  name: nginx-pod
+  name: nginx-pod-fifth
   labels:
     app: myapp4
 spec:
@@ -12,8 +12,8 @@ spec:
     - containerPort: 80
     resources:
       requests: 
+        cpu: 0.2
+        memory: 150Mi
+      limits: 
         cpu: 0.5
         memory: 250Mi
-      limits: 
-        cpu: 1
-        memory: 500Mi
