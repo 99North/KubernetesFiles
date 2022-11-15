@@ -1,0 +1,24 @@
+apiVersion: v1 
+kind: Pod
+
+metadata: 
+  name: cm-pod1
+  namespace: myns
+  labels: 
+    env: cm-pod1
+
+spec: 
+  containers:
+    - name: cm-container
+      image: coolgourav147/nginx-custom
+      
+      volumeMounts:
+        - name: config-volume
+          mountPath: /etc/config
+
+  volumes: 
+    - name: config-volume
+      configMap:
+          name: cm1
+              
+  restartPolicy: Never  

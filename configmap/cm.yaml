@@ -1,0 +1,11 @@
+apiVersion: v1
+kind: ConfigMap
+metadata:
+  creationTimestamp: null
+  name: cm1
+
+data:
+  SPECIAL_LEVEL: very
+  SPECIAL_TYPE: charm
+  SPECIAL_POWER: max
+
