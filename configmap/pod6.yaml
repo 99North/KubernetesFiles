@@ -1,4 +1,19 @@
 apiVersion: v1
+data:
+  username: ZGViaXByYXNhZA==
+  password: dXNlcnB3ZA==
+kind: Secret
+metadata:
+  creationTimestamp: "2022-11-15T08:06:58Z"
+  name: mysec
+  namespace: default
+  resourceVersion: "150015"
+  uid: 29b9c023-5808-4a79-a830-4defad4e2c77
+type: Opaque
+
+---
+
+apiVersion: v1
 kind: Pod
 metadata:
   creationTimestamp: null
@@ -7,11 +22,12 @@ metadata:
   name: pod
 spec:
   containers:
-  - args:
-    - pod6
-    image: coolgourav147/nginx-custom
-    name: pod
-    env: 
+  
+    - image: coolgourav147/nginx-custom
+      name: pod
+      
+      
+      env: 
         - name: secretusername
           valueFrom:
               secretKeyRef:
